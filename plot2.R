@@ -23,7 +23,7 @@ tidyData<- transform(tidyData, Date = as.Date(tidyData$Date, format = "%d/%m/%Y"
                      Time = strptime(paste(tidyData$Date, tidyData$Time), 
                                      format = "%d/%m/%Y %H:%M:%S"))
 # 3.Draw the second plot
-png("plot2.png", bg = "transparent")             #Initiate the PNG device 
+png("plot2.png", bg = "transparent", width = 480, height = 480)             #Initiate the PNG device 
 Sys.setlocale("LC_TIME", "English")              #Set the Languague as English(for non-English OS) 
 plot(tidyData$Time,tidyData$Global_active_power,type = "l",xlab = "",
      ylab = "Global Active Power (kilowatts)")

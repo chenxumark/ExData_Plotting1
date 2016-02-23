@@ -23,7 +23,7 @@ tidyData<- transform(tidyData, Date = as.Date(tidyData$Date, format = "%d/%m/%Y"
                               Time = strptime(paste(tidyData$Date, tidyData$Time), 
                                               format = "%d/%m/%Y %H:%M:%S"))
 # 3.Draw the first plot
-png("plot1.png",bg = "transparent")             #initiate the PNG device 
+png("plot1.png",bg = "transparent", width = 480, height = 480)             #initiate the PNG device 
 hist(tidyData$Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)",
      ylab = "Frequency", main = "Global Active Power")
 dev.off()  #close the device

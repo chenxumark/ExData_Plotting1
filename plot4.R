@@ -24,7 +24,7 @@ tidyData<- transform(tidyData, Date = as.Date(tidyData$Date, format = "%d/%m/%Y"
                                      format = "%d/%m/%Y %H:%M:%S"))
 # 3.Draw the fourth plot
 ##Initiate the PNG device
-png("plot4.png", bg = "transparent") 
+png("plot4.png", bg = "transparent", width = 480, height = 480) 
 ##Set the Languague as English(for non-English OS) 
 Sys.setlocale("LC_TIME", "English") 
 ##  set up 2*2 plot
